@@ -24,6 +24,9 @@
   text-decoration: none;
   transition: 0.3s;
 }
+.container_sublist{
+  
+}
 
 .nav__item a:hover {
   color: #17bf9e;
@@ -125,7 +128,9 @@
 
 /* Show sub-navigation on hover */
 .nav__item:hover .sub__nav__list {
-  max-height: 200px; /* Adjust the max-height based on your content */
+  max-height: 200px;
+  position: relative; 
+  text-align: right;
 }
 .login{
   display: none;

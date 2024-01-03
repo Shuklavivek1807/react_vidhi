@@ -64,7 +64,7 @@ const Home = () => {
         formValues = value;
         console.log(formValues)
         try {
-          let result = await fetch('http://localhost:5000/enquiry', {
+          let result = await fetch('http://www.api.vidhimantraa.com/enquiry', {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',

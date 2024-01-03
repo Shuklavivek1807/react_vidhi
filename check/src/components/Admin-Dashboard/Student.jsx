@@ -8,7 +8,7 @@ const Student =()=>{
 
     const getStudent = async()=>{
         try{
-            let result = await fetch('http://localhost:5000/admin/student',{
+            let result = await fetch('http://www.api.vidhimantraa.com/admin/student',{
                 method:"GET",
                 headers: {
                     "Content-Type":"application/json"

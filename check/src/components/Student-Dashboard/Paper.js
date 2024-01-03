@@ -24,7 +24,7 @@ const Paper = () => {
 
   const getPaper = async () => {
     try {
-      let result = await fetch('http://localhost:5000/available-papers', {
+      let result = await fetch('http://www.api.vidhimantraa.com/available-papers', {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json'
@@ -44,7 +44,7 @@ const Paper = () => {
 
   const getStudent = async () => {
     try {
-      const result = await fetch('http://localhost:5000/student-record', {
+      const result = await fetch('http://www.api.vidhimantraa.com/student-record', {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
@@ -64,7 +64,7 @@ const Paper = () => {
   }
   const getResponse = async () => {
     try {
-      const result = await fetch('http://localhost:5000/student-response', {
+      const result = await fetch('http://www.api.vidhimantraa.com/student-response', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
