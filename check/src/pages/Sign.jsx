@@ -9,8 +9,8 @@ import {
   FormGroup,
   Label,
   Input,
-  Button,
 } from 'reactstrap';
+import Swal from 'sweetalert2'
 
 const SignInPage = () => {
   const [email, setEmail] = useState('');
@@ -70,12 +70,22 @@ const SignInPage = () => {
           window.location.href = '/student';
         }
       } else {
-        // Email and password do not match
         console.log('Invalid email or password');
-        // Set an error message or take appropriate action
+        // Display a sweet alert for the error
+        Swal.fire({
+          icon: 'error',
+          title: 'Oops...',
+          text: 'Invalid email or password!',
+        });
       }
     } catch (error) {
       console.error('Error:', error);
+      // Display a sweet alert for the error
+      Swal.fire({
+        icon: 'error',
+        title: 'Oops...',
+        text: 'Something went wrong!',
+      });
     }
   };
   
