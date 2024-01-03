@@ -51,7 +51,7 @@ const OpenPaper = ({ paper, onBack, email }) => {
       }).then(async (swalResult) => {
         if (swalResult.isConfirmed) {
           try {
-            let responseResult = await fetch("http://www.api.vidhimantraa.com/response", {
+            let responseResult = await fetch("https://www.api.vidhimantraa.com/response", {
               method: "POST",
               headers: {
                 "Content-Type": "application/json",

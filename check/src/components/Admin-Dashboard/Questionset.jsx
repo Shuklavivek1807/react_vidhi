@@ -47,7 +47,7 @@ const QuestionSet = () => {
       if (result.isConfirmed) {
         // Remove the question from the state
         try {
-          let result = await fetch(`http://www.api.vidhimantraa.com/paper/${id}`, {
+          let result = await fetch(`https://www.api.vidhimantraa.com/paper/${id}`, {
             method: 'DELETE',
             headers: {
               'Content-Type': 'application/json',
@@ -100,7 +100,7 @@ const QuestionSet = () => {
       if (result.isConfirmed) {
         const { startDatetime, endDatetime, duration, option } = result.value;
         try {
-          let result = await fetch(`http://www.api.vidhimantraa.com/paper/${id}`, {
+          let result = await fetch(`https://www.api.vidhimantraa.com/paper/${id}`, {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',
@@ -202,7 +202,7 @@ const QuestionSet = () => {
 
   const getPaper = async () => {
     try {
-      let result = await fetch('http://www.api.vidhimantraa.com/question', {
+      let result = await fetch('https://www.api.vidhimantraa.com/question', {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json',
@@ -294,7 +294,7 @@ const QuestionSet = () => {
 
     const finalSubmit = async () => {
       try {
-        const result = await fetch('http://www.api.vidhimantraa.com/question', {
+        const result = await fetch('https://www.api.vidhimantraa.com/question', {
           method: 'POST',
           body: JSON.stringify({
             title: title,
@@ -380,7 +380,7 @@ const QuestionSet = () => {
 
     const viewQuestionPaper = async () => {
       try {
-        let result = await fetch(`http://www.api.vidhimantraa.com/question/${id}`, {
+        let result = await fetch(`https://www.api.vidhimantraa.com/question/${id}`, {
           method: 'GET',
           headers: {
             'Content-Type': 'application/json',
@@ -446,7 +446,7 @@ const QuestionSet = () => {
           });
 
           try {
-            const response = await fetch(`http://www.api.vidhimantraa.com/question/${id}/${question._id}`, {
+            const response = await fetch(`https://www.api.vidhimantraa.com/question/${id}/${question._id}`, {
               method: 'PUT',
               headers: {
                 'Content-Type': 'application/json',
@@ -488,7 +488,7 @@ const QuestionSet = () => {
           // Remove the question from the state
           const updatedView = view.filter((item) => item !== question);
           try {
-            let result = await fetch(`http://www.api.vidhimantraa.com/question/${id}/${question._id}`, {
+            let result = await fetch(`https://www.api.vidhimantraa.com/question/${id}/${question._id}`, {
               method: 'DELETE',
               headers: {
                 'Content-Type': 'application/json',
@@ -514,7 +514,7 @@ const QuestionSet = () => {
 
       if (updatedTitle !== null && updatedTitle !== '') {
         try {
-          const response = await fetch(`http://www.api.vidhimantraa.com/question/${id}`, {
+          const response = await fetch(`https://www.api.vidhimantraa.com/question/${id}`, {
             method: 'PUT',
             headers: {
               'Content-Type': 'application/json',
@@ -572,7 +572,7 @@ const QuestionSet = () => {
         };
 
         try {
-          const response = await fetch(`http://www.api.vidhimantraa.com/question/${id}`, {
+          const response = await fetch(`https://www.api.vidhimantraa.com/question/${id}`, {
             method: 'POST',
             body: JSON.stringify(newQuestion),
             headers: {

@@ -65,7 +65,7 @@ const SignUpPage = () => {
     }
    
     try{
-        let result = await fetch('http://www.api.vidhimantraa.com/registration', {
+        let result = await fetch('https://www.api.vidhimantraa.com/registration', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',

@@ -37,7 +37,7 @@ const SignInPage = () => {
     }
   
     try {
-      const result = await fetch('http://www.api.vidhimantraa.com/signin', {
+      const result = await fetch('https://www.api.vidhimantraa.com/signin', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
